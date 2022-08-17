@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+ 
+    <link rel="stylesheet" href="/CSS/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  </head>
+
+
+
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+      <header>BOOK IT</header>
+      
+      <a href="/adminpage">
+        <i class="fas fa-link"></i>
+        <span>ADD TRAINS</span>
+      </a>
+      <a href="/delete">
+        <i class="fas fa-stream"></i>
+        <span>DELETE TRAINS</span>
+      </a>
+     
+    </div>
+<h1 class="heading"> ADD TRAINS TO DATABASE</h1>
+<div class="form">
+   <form action="/addtodb" method="post">
+     <label for="trainname">TRAIN NAME</label>
+ <input type="text" id="trainname"  name="trainname" required>
+ <label for="weekdays">WEEK DAYS</label>
+ <input type="text" id="weekdays" name="weekdays" required>
+ <label for="date_test">DATE_DESTINATION</label>
+ <input type="text" name="date_dest" id="date-dest" required>
+ <label for="time_dest">TIME_DESTINATION</label>
+<input type="text" name="time_dest" id="date-dest" required>
+<label for="date-start">DATE_START</label>
+ <input type="text" name="date_start" id="date_start" required>
+ <label for="time-start">TIME_START</label>
+ <input type="text" name="time_start" id="time_start" required>
+ <label for="source">SOURCE</label>
+ <input type="text" name="source" id="source"  required>
+
+ <label for="destination"> DESTINATION</label>
+ <input type="text" name="destination" ID="destination" required>
+ <label for="cost2A"> COST OF 2A</label>
+ <input type="number" name="cost2A" id="cost2A"  >
+ <label for="type2A">TYPE OF 3A</label>
+ <input type="text" name="type2A" id="type2A" value="NA" >
+
+ <label for="availability2A"> AVAILABILITY OF 2A</label>
+ <input type="text" name="availability2A" id=" availability2A" value="NA">
+
+ <label for="cost3A"> COST OF 3A</label>
+ <input type="number" name="cost3A" id="cost3A"  >
+ <label for="type3A">TYPE OF 3A</label>
+ <input type="text" name="type3A" value="NA">
+
+ <label for="availability3A"> AVAILABILITY OF 3A</label>
+ <input type="text" name="availability3A" id="availability3A" value="NA">
+
+ <label for="costGA"> COST OF GA</label>
+ <input type="number" name="costGA" ID="costGA" >
+
+ <label for="typeGA"> TYPE OF GENERAL</label>
+ <input type="text" name="typeGA" id="typeGA" value="NA" >
+
+ <label> AVAILABILITY OF GENERAL</label>
+<input type="text" name="availabilityGA" id="availabilityGA" value="NA">
+
+<label for="costRE">COST OF RESERVATION</label>
+ <input type="number" name="costRE" >
+
+ <label>TYPE OF RESERVATION</label>
+ <input type="text" name="typeRE" id="typeRE" value="NA">
+ <label for="availabilityRE"> AVAILABILITY OF RESERVATION</label>
+ <input type="text" name="availabilityRE" id="availabilityRE"  value="NA">
+
+ 
+ <input type="submit" value="Submit"> 
+   </form>
+</div>
+    
+</body>
+</html>

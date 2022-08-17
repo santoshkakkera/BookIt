@@ -1,0 +1,15 @@
+<% for(let i of cont){ %>
+    <div class="ticket2">
+        <div class="toprow">
+            <p class="trainclass"><b><%- i.typetier %></b></p>
+            <p class="ticketsavailable"><b><%- i.available %></b></p>
+        </div>
+    
+        <div class="category">
+            <p><%- i.type %></p>
+            <p class="cost"><%- i.cost %></p>
+        </div>
+    
+        <p class="cancel"> <a href="#"> Free Cancellation</a> </p>
+    </div>
+    <% } %>

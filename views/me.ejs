@@ -1,0 +1,104 @@
+const express = require('express');
+const MongoClient = require('mongodb').MongoClient;
+const bodyParser = require('body-parser');
+const path = require('path');
+const { redirect } = require('express/lib/response');
+const app = express()
+var traininfo;
+
+const Register = require("./model/SignUpReg.js");
+const { stat } = require('fs');
+const { default: mongoose } = require('mongoose');
+
+const urlstore = "mongodb+srv://SeetaRam:mongodb@cluster0.ugz8l.mongodb.net/traininfo?retryWrites=true&w=majority"
+app.use(express.json())
+app.use(express.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({limit:'5000mb', extended: true, parameterLimit: 10000000000000}))
+
+
+app.use(express.static(path.join(__dirname, './public')))
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
+
+
+app.get('/',(req,res)=>{
+    res.render('index');
+});
+
+
+app.get('/trainpage', (req, res)=>{
+    res.render('Train');
+});
+
+
+app.get('/searchpage', (req, res)=>{
+    res.render('Search');
+});
+
+
+app.get('/signup',(req,res)=>{
+    res.render('SignUp');
+});
+
+
+app.post("/register", async (req,res)=>{
+    try 
+    {
+        const password = req.body.password;
+        const confirmpassword = req.body.confirmpassword;
+        
+        if(password == confirmpassword)
+        {
+            const registeruser = await Register.create({
+                firstname : req.body.firstname,
+                lastname : req.body.lastname,
+                email : req.body.email,
+                password : password,
+            })
+
+            console.log(registeruser);
+            const registered = await registeruser.save();
+            res.send("User details fetched into Database SuccessFully");
+        }
+
+        else
+        {
+            res.send("Passwords are not matching");
+        }
+    } 
+    catch (error) 
+    {
+        res.status(400).send(error);
+    }
+})
+
+
+app.post('/searchtrains',(req,res)=>{
+    traininfo.collection('trains').find({}).toArray((error,result)=>{
+          if(error) throw error;
+
+        //   console.log(result);
+
+        let source1 = req.body.from;
+        let destination1 = req.body.to;
+         
+          for(let i=0 ; i<result.length ; i++)
+          {
+              if((source1 == result[i].source) && (destination1 == result[i].destination))
+              {
+                  res.send(result[i])
+              }
+          }
+    });
+});
+
+
+
+app.listen(3000,()=>{
+    mongoose.connect(urlstore,{useNewUrlParser:true},(error,result)=>{
+        if(error) throw error
+       // traininfo = result.db('traininfo');
+        console.log("Connection SuccessFul");
+    });
+});
+

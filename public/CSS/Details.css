@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+body{
+    background-color: #eef4fd;
+}
+
+
+#reviewbooking{
+    font-size: 200%;
+    color: blue;
+    padding: 20px 0px 90px 50px;
+}
+
+.ticket{
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 50%;
+    height: 330px;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+
+
+.boarding{
+    font-size: 130%;
+    background-color: rgba(201,212,225,.2);;
+}
+
+
+.line{
+    border: 0.5px solid;
+    margin-left: -1.7%;
+    margin-right: -1.7%;
+}
+
+
+.classandquotaandticketstatus{
+    margin-top: 1%;
+    height: 50px;
+    display: flex;
+}
+
+
+.classandquota{
+    margin-left: 7%;
+    font-size: 110%;
+}
+
+
+.ticketstatus{
+    margin-left: 17%;
+    display: flex;
+    font-size: 110%;
+}
+
+
+.boardingheading,.endingheading{
+    border: 1px solid black;
+    width: fit-content;
+}
+
+
+.trainimage{
+    height: 20px;
+    width: 45px;
+}
+
+
+.trainname{
+    font-size: 120%;
+}
+
+
+.stations{
+    display: flex;
+}
+
+
+.endingstation{
+    margin-left: 67%;
+}
+
+
+.stationchangebtn{
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+
+.interested{
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 50%;
+    height: 250px;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+
+
+.freecancellation{
+    font-size: 150%;
+    text-align: center;
+}
+
+
+.answer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.yes,.no{
+    border-radius: 10px;
+    font-size: 150%;
+}  
+
+
+.yes{
+    margin-bottom: 2%;
+}
+
+.mandatory{
+    font-size: 130%;
+    margin-left: 9%;
+}
+
+
+.irctc{
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 50%;
+    height: 250px;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+
+
+.userid{
+    background-color: #eef4fd;
+    border: 1px solid #eef4fd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.irctcuserid{
+    font-size: 130%;
+}
+
+
+#enterid{
+    width: 80%;
+}
+
+
+.checkid{
+    border: 2px solid orange;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    font-size: 120
+    5;
+}
+
+
+.createid{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.idcreate,.forgotid{
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 150%;
+}
+
+
+.contactdetails{
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 50%;
+    height: 250px;
+    margin-left: 9%;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+
+.mobilenumber{
+    width: 60%;
+}
+
+
+.email{
+    width: 69.5%;
+}
+
+
+.booknow{
+    text-align: center;
+}
+
+
+.book{
+    border: 2px solid orange;
+    background-color: orange;
+    border-radius: 5px;
+    font-size: 250%;
+    width: 50%;
+}

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.upi {
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 7px;
+    border-color: black;
+}
+
+.cards {
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 7px;
+    border-color: black;
+}
+
+.btn {
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+    color: white;
+    padding: 7px;
+    border-color: white;
+    font-size: 14px;
+}
+
+.container {
+    width: 750px;
+    height: auto;
+    border: 1px solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-around;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.first-row {
+    display: flex;
+}
+
+.owner {
+    width: 100%;
+    margin-right: 40px;
+}
+
+.input-field {
+    border: 1px solid #999;
+}
+
+.input-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection select {
+    padding: 10px 20px;
+}
+
+.card img {
+    width: 100px;
+}
